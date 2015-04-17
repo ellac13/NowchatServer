@@ -33,6 +33,7 @@ public class ServerCore {
 			{
 				while(true){
 					Socket clientSocket = serverSocket.accept();
+					Thread t = new ClientHandlerThread(clientSocket);
 					t.start();
 					
 				}
